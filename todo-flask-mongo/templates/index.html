@@ -10,6 +10,18 @@
 <h1>MongoDB Flask app</h1>
 <div class = "content">
     <label for="content">Todo content</label>
+    <form method="post" >
+    <input type="text" name="list_item">
+    <button type="submit">Submit </button>
+</form>
+</div>
+
+<div class="list">
+    <ul>
+        {%for i in list_items%}
+    <li>{{i.item}}</li>
+    {%endfor%}
+    </ul>
 </div>
 
 </body>
