@@ -8,13 +8,12 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            padding: 20px;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpaperaccess.com/full/203545.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
             color: #fff; /* Text color for better visibility on the background */
-            margin: 0; /* Remove default margin */
+            min-height: 100vh
         }
 
         h1 {
@@ -25,7 +24,7 @@
         .content {
             max-width: 400px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.389);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,7 +39,7 @@
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
-            background-color: rgba(255, 255, 255, 0.7); /* Adjusted transparency */
+            background-color: rgba(255, 255, 255, 0.333); /* Adjusted transparency */
         }
 
         .card:hover {
@@ -59,7 +58,7 @@
         }
 
         .card-text {
-            color: #6c757d;
+            color: #e8ecf0;
             margin-bottom: 20px;
         }
 
@@ -88,6 +87,23 @@
         .btn-delete:hover {
             filter: brightness(90%);
         }
+        label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        }
+
+        .label-class {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        #label-id {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
     </style>
 </head>
 <body>
@@ -95,9 +111,9 @@
     <h1>MongoDB Flask Todo App</h1>
 
     <div class="content">
-        <label for="content">Todo Content</label>
+        <label for="content" class="label-class" id="label-id">Todo Content</label>
         <form method="post" action="{{ url_for('index') }}">
-            <input type="text" name="list_item" placeholder="Enter your todo">
+            <input type="text" name="list_item" placeholder="Enter your task">
             <button type="submit" class="btn btn-dark">Add Todo</button>
         </form>
     </div>
